@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">	
+	<title>Climate & Tree Canopy</title>
+
+
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/avara" type="text/css"/>
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/nazi-typewriter" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Alegreya|Anaheim|Assistant|Cinzel|Lobster|Patua+One|Permanent+Marker|Special+Elite" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Charm|Indie+Flower|Lobster|Pacifico" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Anaheim|Exo+2|Montserrat|Noto+Sans" rel="stylesheet"><link href="https://fonts.googleapis.com/css?famsily=Lobster|Lobster+Two" rel="stpenylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Lora|Oxygen|Playfair+Display|Poppins|Quicksand" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/dropo-down.css" rel="stylesheet"> 
+	<link href="../css/favorites.css" rel="stylesheet">
+        <link href="../css/index.styles.css" rel="stylesheet"> 
+<link href="../css/media-query.css" rel="stylesheet">
+<link rel="../stylesheet" href="/css/video-react.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+
+$(document).ready(function(){
+  $("div.holiday").hover(function(){
+    $(this).css("background-color", "GoldenRod");
+    }, function(){
+    $(this).css("background-color", "Tomato");
+  });
+});
+</script>
+
+ <!-- REACT LIBRARY -->
+  <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+  <!-- REACT DOM LIBRARY -->
+  <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+  <!-- BABEL LIBRARY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+
+
+
+<style>
+
+.old_typewriter {
+   font-family: 'NaziTypewriterRegular';
+   font-weight: normal;
+   font-style: normal;
+}
+
+.avara {
+   font-family: 'AvaraBold';
+   font-weight: normal;
+   font-style: normal;
+}
+
+
+img {display:inline;}
+
+body {background-color:  ;
+}
+
+.frame {
+	align-content: center;
+	display: inline;
+}
+
+
+ .red_button {
+background-color: Crimson;
+color: GhostWhite;
+text-align: center;
+height: 30px; 
+width: 130px; 
+border-Radius: 50%;
+font-family: 'Indie Flower', cursive;
+}
+
+
+
+</style>
+
+
+
+</head>
+
+
+<body><a name="top"></a>
+
+
+	<header class="header" >
+		<a href="../index.html"class="header">ABFreewrite.com</a>
+	</header>
+
+ <div hidden class="indieflower holiday">A frequency of love</div></div>
+
+<div class="red_button"> <script src="../js/newdate.js" > </script></div>
+
+
+
+<!-- DESIGNATED LOCATION TO INSERT REACT CONTENT  -->
+
+  <!-- JAVASCRIPT -->
+  <script type="text/babel">
+
+const blackandwhite= document.getElementById("app2")
+const oyster= document.getElementById("app3")
+const seaotter= document.getElementById("app4")
+
+
+let BasicAudio = function(){
+
+   let mpeg = { 
+         backgroundColor: 'Tomato',
+         color: '#fff',
+         width: 250,
+         padding: 10,
+borderRadius: 4
+}  
+
+
+return(
+<div>
+
+<audio style={mpeg} controls src="audio/NewRecording74.m4a"></audio>
+
+</div>
+)}
+
+let Contact = function(){
+	let button = {
+	backgroundColor: 'GhostWhite',
+        borderRadius: 2,
+        fontFamily: 'Indie Flower',
+        boxShadow: '10px 10px 5px #888888',
+        paddingLeft: 20,
+paddingRight: 20,
+paddingTop: 10,
+paddingBottom: 10,
+marginLeft: 100,
+marginTop: 50
+	
+	}
+return(
+        <div>
+	<a href="contact.html" style={button}>Contact</a>
+</div>
+	); 
+} 
+
+
+let TextBox = function(props) {
+   let TBColor = {
+      backgroundColor: 'Tomato', 
+marginRight: 25,
+color: 'GhostWhite',
+borderRadius: 4,
+padding: 2,
+width: 200,
+
+fontFamily: 'Quicksand', 
+height:props.pixheight
+}
+
+let sanseriffont ={
+marginTop: -7, 
+ fontSize: 17,
+color: 'GhostWhite',
+backgroundColor: 'Tomato',
+fontFamily: 'Quicksand'
+}
+
+
+return(
+  <div>
+<main style={TBColor}><h1><a href={props.insitelink}>{props.content}</a></h1><p style={sanseriffont}>{props.smalltext}</p></main>
+</div>
+);
+} 
+
+var Facts = function(props) {
+    var factbox = {
+backgroundColor: '#fff', 
+color: '#000',
+fontSize: 14,
+fontFamily: 'Quicksand', 
+marginTop: '',
+marginLeft: '30px',
+width: '75%'
+
+} 
+
+return(
+<div>
+<div style={factbox}>
+<ul>
+<li><a href={props.link1}>{props.listitem1}</a></li>
+<li><a href={props.link2}>{props.listitem2}</a></li>
+<li><a href={props.link3}>{props.listitem3}</a></li>
+<li><a href={props.link4}>{props.listitem4}</a></li>
+
+</ul>
+</div>
+</div>); } 
+
+let Calendar = function(props){
+   
+    return(
+  <div>
+    
+      <TextBox bc="Tomato" tb="Tomato" content={props.content}/> 
+      <img src={props.image} />
+
+<Facts listitem1={props.listitem1} listitem2={props.listitem2} listitem3={props.listitem3} listitem4={props.listitem4}/> 
+         
+         
+  </div>
+);
+}
+
+
+let Number= function(props) {
+   let innerColor = {
+       backgroundColor: 'PaleGoldenRod',
+      fontSize: 12, 
+marginRight: 25,
+color: 'Green',
+borderRadius: 10,
+padding: 10,
+width: 70,
+fontFamily: 'Quicksand', 
+height: props.pixheight
+}
+
+let sanseriffont ={
+marginTop: -7, 
+ fontSize: 17,
+color: 'Green',
+fontFamily: 'Quicksand'
+}
+
+
+return(
+  <div>
+<main style={innerColor}><h1><a href={props.insitelink}>{props.content}</a></h1><p style={sanseriffont}>{props.smalltext}</p></main>
+</div>
+);
+} 
+
+
+
+ let Freewrite = function(props){
+
+   var fillColor = {
+           backgroundColor: props.bkgd,
+           fontFamily: 'Lora', 
+           color: props.Fclr, 
+           width: props.wi,
+textIndent: '5em',
+           padding: 9,  
+           border: '1px dotted Tomato',
+           fontSize: 12, 
+           borderRadius: 2
+} 
+
+   var authorStyle = {
+          fontFamily: 'Lora',
+          fontSize: 12,
+          backgroundColor: props.bkgd,
+          color: '#000'
+}
+
+
+return(
+<div>
+  <main>
+    <div style={fillColor}>
+       <h3>{props.bold}</h3>
+       <h4>{props.date}</h4>
+           {props.article}
+       <p style={authorStyle}>{props.author}</p>
+
+    </div>
+  </main>
+
+</div>);  
+} 
+
+
+let Love = function(props) {
+
+      let odds = {
+                display: 'inline-block', 
+                backgroundColor: props.bc, 
+                color: props.colour,
+		borderRadius: 20, 
+		fontFamily: props.font, 
+		fontSize: 16,
+		width: props.width, 
+		padding: 5,
+marginTop: props.top
+
+    }
+
+      var blockStyle= {
+		fontSize: 14,
+                fontFamily: 'Quicksand',
+		backgroundColor: '#fff',  
+		
+		
+
+    }
+
+      var average = {
+               width: props.pixwidth, 
+               height: props.pixheight, 
+               marginBottom: 3
+}
+
+ var icon = {
+     marginTop: -100
+}
+
+
+
+
+      return(
+      <div>
+        	
+        			<table><tr>
+                                     <td><h1 style={odds}><img style={icon} src={props.icon}/><a href={props.link}> {props.title}</a></h1>
+        				<img src={props.photo} alt={props.alt} style={average}/>
+        				
+        				<blockquote style={{width: '245px', marginLeft: '-2', padding: '14', fontFamily: 'Lora', backgroundColor: 'GhostWhite', borderBottom: '3px dotted red', borderLeft: '3px dotted CadetBlue', borderRight: '3px dotted CadetBlue'}}>{props.quote}</blockquote>
+        			</td>
+
+        			
+        		</tr>
+        		
+
+      		</table>
+  		</div>
+      );
+    }
+
+var French = function(props) {
+  var boite = {
+    backgroundColor : 'YellowGreen',
+color: 'AliceBlue', 
+    width: '300', 
+    
+borderRadius: 15,
+fontSize: 15,
+fontFamily: 'Quicksand', 
+paddingLeft: 10, 
+paddingRight: 10, 
+marginTop: 10
+
+}
+
+return(
+<div>
+  <table style={boite}>
+    
+    <tr><td>{props.french}</td></tr>
+<tr><td>"{props.pronunciation}"</td></tr>
+<tr><td>{props.translation}</td></tr>
+  </table>
+</div>
+); 
+
+}
+
+class JSXblockquote extends React.Component { 
+	render() {
+		var blockStyle= {
+
+			fontSize: 15,
+                        borderRadius: 5,
+                        fontFamily: 'Quicksand', 
+			color: '#000',
+			fontWeight: 'bold',
+                        backgroundColor: 'AliceBlue', 
+                        padding: 5,
+                        width: 275
+		}
+		return (
+			<blockquote style={blockStyle}>&ldquo;{this.props.quotation}</blockquote>
+
+			); 
+	}
+} 
+
+
+Love.defaultProps = {
+   bc: 'YellowGreen', 
+   width: 277,
+   pixwidth: 310,
+   pixheight: 215,
+   font: 'Quicksand'
+} 
+    
+    ReactDOM.render(
+
+     
+<div>
+
+<Love bc="Tomato" title="Dearborn's focus is on preserving trees; permit required before removing a tree"  link="https://www.pressandguide.com/news/dearborns-focus-is-on-preserving-trees-permit-required-before-removing-a-tree/article_fbe55f90-d026-11ea-85d1-8b0792905eae.html" photo="../assets/dearborn-trees.png"/> 
+
+<Love bc="CornflowerBlue" title="Lyft vows to go all electric by 2030" link="https://www.msn.com/en-us/news/technology/lyft-commits-to-all-electric-vehicles-by-2030/ar-BB15CrX6?OCID=ansmsnnews11" photo="../assets/lyft.png" quote="&ldquo;Lyft acknowledges the switch will not be easy, but should reduce up to 16 million metric tons of greenhouse gas emissions while also being easier on drivers' wallets. Lyft has outlined a three-step plan to meet this goal. First, the company will focus on policies to accelerate electric vehicle cost parity; second, it will provide electric vehicle rentals to drivers as part of its Express Drive program; finally, Lyft plans to build demand for electric vehicles among all Lyft users.&rdquo;" /> 
+
+<Love title="Coronavirus pandemic could lead to biggest carbon emissions drop since World War II" link="https://thehill.com/changing-america/sustainability/climate-change/490997-coronavirus-pandemic-could-lead-to-biggest" photo="../assets/climate-corona.jpg" quote="&ldquo;This drop is not due to structural changes so as soon as confinement ends, I expect the emissions will go back close to where they were,&rdquo; Corinne Le Qu&eacute;r&eacute;, a climate scientist at the University of East Anglia in eastern England, told Reuters." />
+
+
+<Love bc="Plum" title="Pollination Guelph recognized for helping maintain a buzz about bee and insect stewardship" link="https://www.guelphtoday.com/grounded/pollination-guelph-recognized-for-helping-maintain-a-buzz-about-bee-and-insect-stewardship-2572953" photo="../assets/bees-pollination.jpg" quote ="&ldquo;Pollination Guelph is an entirely volunteer-run group that focuses on protecting bee and other insect habitats by building and maintaining public and private gardens across the city to attract various insect species and improve biodiversity. Founded in 2008, it runs educational initiatives and advocacy campaigns, including an annual Pollination Symposium, to help Guelph become a model for the protection of pollinators and a leader in environmental sustainability.&rdquo;"/> 
+
+
+
+
+</div>
+
+        ,
+    blackandwhite
+    );
+
+
+
+ReactDOM.render(
+
+<div>
+
+<Love icon="../assets/radiation.png" title="Toxic chemical production vastly underestimated" link="https://cen.acs.org/policy/chemical-regulation/Number-chemicals-commerce-vastly-underestimated/98/i7" photo="../assets/chemical-drums.png" quote="Previous research studies to grasp the effects of certain chemicals on ecosystems and human health have relied mainly on inventories from the US, Canada, and western Europe that total around 100,000 substances. 'While these countries dominated chemical production in the early 2000s, their market share has declined, and now China, India, Brazil, Russia, and South Africa account for 40% of chemicals in trade,' says Zhanyun Wang, an environmental scientist at ETH Zurich.The scientists downloaded and combined publicly available inventories, expanding from North America and Europe to include 16 other countries and regions encompassing all the top 10 chemical producers except Brazil and Saudi Arabia. The combined list includes 157,000 individual chemicals identified by their Chemical Abstracts Service (CAS) number, a unique number assigned to only one substance. It also includes 75,000 mixtures, polymers, and 'chemical substances of unknown or variable composition' also identified by CAS numbers."
+/>
+
+<Love title="Trump dismantles environmental protections under cover of coronavirus" link="https://www.theguardian.com/us-news/2020/may/10/trump-environmental-blitzkrieg-coronavirus" photo="../assets/Trump-May7-2020.png"/> 
+
+<Love bc="GoldenRod" title="These 6 books explore climate change science, solutions" link="chrome-extension://eedlgdlajadkbbjoobobefphmfkcchfk/newtab.html" photo="../assets/climate-change-book.png"/> 
+
+
+<Love icon="../assets/joshua-tree.png" top="25" bc="YellowGreen" title="The best trees to reduce air pollution" link="https://www.bbc.com/future/article/20200504-which-trees-reduce-air-pollution-best" photo="../assets/maple.png"/>  
+
+
+
+</div>
+        ,
+   oyster
+    );
+
+
+ReactDOM.render(
+
+     
+<div>
+ 
+
+<Love icon="../assets/data-center.png" title="Google data centers secret cost : billions of gallons of water" link="https://www.bloomberg.com/news/features/2020-04-01/how-much-water-do-google-data-centers-use-billions-of-gallons" photo="../assets/google-data-center.png" quote="In August 2019, the Arizona Municipal Water Users Association built a 16-foot pyramid of jugs in its main entrance in Phoenix. The goal was to show residents of this desert region how much water they each use a day-120 gallons-and to encourage conservation. A few weeks earlier in nearby Mesa, Google proposed a plan for a giant data center among the cacti and tumbleweeds. The town is a founding member of the Arizona Municipal Water Users Association, but water conservation took a back seat in the deal it struck with the largest U.S. internet company. Google is guaranteed 1 million gallons a day to cool the data center, and up to 4 million gallons a day if it hits project milestones. If that was a pyramid of water jugs, it would tower thousands of feet into Arizona's cloudless sky."/>
+
+<Love icon="../assets/car.png" bc="YellowGreen" title="UK to ban gas vehicles by 2035 to boost climate efforts" link="https://apnews.com/9a62002f00ae709b3906495c79487d35" photo="../assets/Boris-Johnson-upcoming-Glasgow-climate-summit.png"/> 
+
+
+</div>
+        ,
+    seaotter
+    );
+  </script>
+  </script>
+<br>
+<br>
+
+
+
+
+<div class="react-app" >
+<div id="app2"></div>
+<div id="app3"></div>
+<div id="app4"></div>
+</div>
+
+<!-- ABOVE DIV TAGS ARE RELEVANT TO REACT COMPONENTS PLACEMENT-->
+
+	
+	<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#thu").toggle();
+  });
+});
+
+</script>
+
+
+
+<div hidden id="recordings"></div>
+<div id="thu"></div>
+
+<br><br><br>
+
+
+<div><a href="#top" class="button">Back to top</a></div>
+<br>
+
+	<script src="js/array.js"></script>
+
+
+</body>
+</html>

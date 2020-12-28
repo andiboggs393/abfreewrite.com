@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">	
+	<title>Animals & Space </title>
+<link href="https://fonts.googleapis.com/css
+family=Alegreya|Anaheim|Assistant|Cinzel|Lobster|Patua+One|Permanent+Marker|Special+Elite" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Charm|Indie+Flower|Lobster|Pacifico" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Anaheim|Exo+2|Montserrat|Noto+Sans" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Lobster|Lobster+Two" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Lora|Oxygen|Playfair+Display|Poppins|Quicksand" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/drop-down.css" rel="stylesheet">
+	<link href="../css/favorites.css" rel="stylesheet">
+        <link href="../css/index.styles.css" rel="stylesheet"> 
+<link href="../css/media-querry.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/video-react.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+ <!-- REACT LIBRARY -->
+  <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+  <!-- REACT DOM LIBRARY -->
+  <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+  <!-- BABEL LIBRARY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+
+
+
+<style>
+
+body {background-color: ;
+}
+ .gray_button {
+background-color: Crimson;
+color: GhostWhite;
+height: 300px; 
+width: 300px; 
+border-Radius: 50%;
+font-family: 'Indie Flower', cursive;
+}
+
+</style>
+
+
+
+</head>
+
+
+<body><a name="top"></a>
+	<header hidden class="header" >
+		<a href="../index.html"class="header">ABFreewrite.com</a>
+	</header>
+ <div hidden class="indieflower holiday">Making a future with a future</div></div>
+
+
+<!-- DESIGNATED LOCATION TO INSERT REACT CONTENT  -->
+
+  <!-- JAVASCRIPT -->
+  <script type="text/babel">
+
+
+const blackandwhite= document.getElementById("appanimals1")
+const possum= document.getElementById("appanimals2")
+const fish = document.getElementById("appanimals3")
+
+
+let Contact = function(){
+	let button = {
+	backgroundColor: 'GhostWhite',
+        borderRadius: 2,
+        fontFamily: 'Indie Flower',
+        boxShadow: '10px 10px 5px #888888',
+        paddingLeft: 20,
+paddingRight: 20,
+paddingTop: 10,
+paddingBottom: 10,
+marginLeft: 100,
+marginTop: 50
+	
+	}
+return(
+        <div>
+	<a href="contact.html" style={button}>Contact</a>
+</div>
+	); 
+} 
+
+let TextBox = function(props) {
+   let TBColor = {
+      backgroundColor: props.bc, 
+
+color: 'GhostWhite',
+borderRadius: 4,
+padding: 2,
+width: 245,
+textAlign: 'center',
+fontFamily: 'Quicksand', 
+height:props.pixheight
+}
+
+let sanseriffont ={
+marginTop: -7, 
+ fontSize: 17,
+color: 'GhostWhite',
+backgroundColor: 'Tomato',
+fontFamily: 'Quicksand'
+}
+
+
+return(
+  <div>
+<main style={TBColor}><h2><a href={props.insitelink}>{props.content}</a></h2><p style={sanseriffont}>{props.smalltext}</p></main>
+</div>
+);
+} 
+
+var Facts = function(props) {
+    var factbox = {
+backgroundColor: '#fff', 
+color: '#000',
+fontSize: 14,
+fontFamily: 'Quicksand', 
+marginTop: '-55px',
+marginLeft: '30px',
+width: '90%'
+
+} 
+
+return(
+<div>
+<div style={factbox}>
+<ul>
+<li><a href={props.link1}>{props.listitem1}</a></li>
+<li><a href={props.link2}>{props.listitem2}</a></li>
+<li><a href={props.link3}>{props.listitem3}</a></li>
+<li><a href={props.link4}>{props.listitem4}</a></li>
+</ul>
+</div>
+</div>); } 
+
+
+
+
+let Number= function(props) {
+   let innerColor = {
+       backgroundColor: 'AliceBlue',
+      fontSize: 12, 
+marginRight: 25,
+color: 'Green',
+borderRadius: 10,
+padding: 10,
+width: 70,
+fontFamily: 'Quicksand', 
+height: props.pixheight
+}
+
+let sanseriffont ={
+marginTop: -7, 
+ fontSize: 17,
+color: 'Green',
+fontFamily: 'Quicksand'
+}
+
+
+return(
+  <div>
+<main style={innerColor}><h1><a href={props.insitelink}>{props.content}</a></h1><p style={sanseriffont}>{props.smalltext}</p></main>
+</div>
+);
+} 
+
+
+
+ let Freewrite = function(props){
+   var fillColor = {
+backgroundColor: 'GhostWhite',
+
+fontFamily: 'Quicksand', 
+color: '#000', 
+width: '275',
+padding: 24,  
+ 
+fontSize: 14, 
+borderRadius: 5
+} 
+
+
+return(
+<div>
+  <main><div style={fillColor}><h3>{props.bold}</h3><h4>{props.date}</h4>{props.article}{props.author}</div></main>
+
+</div>); 
+} 
+
+
+
+
+    let Love = function(props) {
+
+      let odds = {
+                display: 'inline-block', 
+                backgroundColor: props.bc, 
+                color: props.colour,
+		borderRadius: 20, 
+		fontFamily: 'Quicksand', 
+		fontSize: 16,
+		width: 330, 
+		padding: 5
+
+    }
+
+      var blockStyle= {
+		fontSize: 14,
+                fontFamily: 'Quicksand',
+		backgroundColor: '#fff',  
+		
+		
+
+    }
+
+      var average = {
+               width: props.pixwidth, 
+               height: props.pixheight, 
+               marginBottom: 3
+}
+
+
+
+      return(
+      <div>
+        	
+        			<table><tr>
+                                     <td><h1 style={odds}><a href={props.link}> {props.title}</a></h1>
+        				<img src={props.photo} alt={props.alt} style={average}/>
+        				
+        				<blockquote style={{width: '245px', marginLeft: '-2', padding: '14', fontFamily: 'Lora', backgroundColor: 'GhostWhite', borderBottom: '3px dotted red', borderLeft: '3px dotted CadetBlue', borderRight: '3px dotted CadetBlue'}}>{props.quote}</blockquote>
+        			</td>
+
+        			
+        		</tr>
+        		
+
+      		</table>
+  		</div>
+      );
+    }
+
+
+
+var French = function(props) {
+  var boite = {
+    backgroundColor : 'DodgerBlue',
+color: 'AliceBlue', 
+    width: '300', 
+    
+borderRadius: 15,
+fontSize: 15,
+fontFamily: 'Quicksand', 
+paddingLeft: 10, 
+paddingRight: 10, 
+marginTop: 10
+
+}
+
+return(
+<div>
+  <table style={boite}>
+    
+    <tr><td>{props.french}</td></tr>
+<tr><td>"{props.pronunciation}"</td></tr>
+<tr><td>{props.translation}</td></tr>
+  </table>
+</div>
+); 
+
+}
+
+class JSXblockquote extends React.Component { 
+	render() {
+		var blockStyle= {
+
+			fontSize: 15,
+                        borderRadius: 5,
+                        fontFamily: 'Quicksand', 
+			color: '#000',
+			fontWeight: 'bold',
+                        backgroundColor: 'AliceBlue', 
+                        padding: 5,
+                        width: 275
+		}
+		return (
+			<blockquote style={blockStyle}>&ldquo;{this.props.quotation}</blockquote>
+
+			); 
+	}
+} 
+
+let Source = function(props) {
+	let journo = {
+backgroundColor: 'GhostWhite',
+color: 'DimGray'}
+
+        let topline = {
+         width: 315} 
+
+	let date= {
+padding: 2}
+
+	let title = { 
+padding: 2}
+
+	return(
+		<div>
+			<div style={topline}>
+                        <abbr style={journo}>{props.writer}</abbr>
+                        <strong style={date}>{props.date}</strong>
+			<a href={props.link}>
+                        <cite style={title}>{props.title}</cite>
+                        </a></div>
+			<label>{props.pub}</label>
+                        <p style={journo}>{props.quote}</p>
+		</div>
+	); 
+
+}
+
+
+
+let SourceList = function(props) {
+ 
+      let idea = {
+       
+        fontFamily: 'SpaceMeatballRegular' 
+} 
+
+return(
+<div>
+<h3 style={idea}>{props.idea}</h3>
+<ol>
+<li><Source writer={props.writer} date={props.date} title={props.title} link={props.link} pub={props.pub} quote={props.quote}/></li>
+<li><Source writer={props.writer2} date={props.date2} title={props.title2} link={props.link2} pub={props.pub2} quote={props.quote2}/></li>
+<li><Source writer={props.writer3} date={props.date3} title={props.title3} link={props.link3} pub={props.pub3} quote={props.quote3}/></li>
+<li><Source writer={props.writer4} date={props.date4} title={props.title4} link={props.link4} pub={props.pub4} quote={props.quote4}/></li>
+<li><Source writer={props.writer5} date={props.date5} title={props.title5} link={props.link5} pub={props.pub5} quote={props.quote5}/></li>
+<li><Source writer={props.writer6} date={props.date6} title={props.title6} link={props.link6} pub={props.pub6} quote={props.quote6}/></li>
+<li><Source writer={props.writer7} date={props.date7} title={props.title7} link={props.link7} pub={props.pub7} quote={props.quote7}/></li>
+<li><Source writer={props.writer8} date={props.date8} title={props.title8} link={props.link8} pub={props.pub8} quote={props.quote8}/></li>
+<li><Source writer={props.writer9} date={props.date9} title={props.title9} link={props.link9} pub={props.pub9} quote={props.quote9}/></li>
+
+</ol>
+</div>
+
+);
+
+}
+
+
+Love.defaultProps = {
+   bc: 'DimGray', 
+   width: 277,
+   pixwidth: 310,
+   pixheight: 215
+} 
+
+TextBox.defaultProps = {
+   bg: 'PaleVioletRed', 
+   st: 'PaleVioletRed'
+   
+} 
+    
+    ReactDOM.render(
+
+     
+<div>
+
+
+<Love title="Botswana moves to rearm rangers as Rhino poaching intensifies" link="https://www.voanews.com/africa/botswana-moves-rearm-rangers-rhino-poaching-intensifies" photo="../assets/Botswana-elephants-killed.png" quote="&ldquo;Botswana has decided to re-arm its wildlife rangers as the southern African country battles increased cases of poaching. In the last six months, at least 17 poachers have been killed in gunfire exchanges with the army.
+
+The government had disarmed wildlife rangers in 2018, saying that under the law, only the military was allowed the use of firearms during anti-poaching patrols.    
+
+With the country losing 56 rhinoceros to poachers in the last two years, the government is reconsidering that approach. &rdquo;"/> 
+
+<Love bc="Tomato" font="SPACEMEATBALLREGULAR" title="The dangers of letting slaughterhouses operate in secrecy" link="https://sentientmedia.org/danger-of-letting-animal-agriculture-industry-operate-in-secrecy/" photo="../assets/ag-gag-laws.png" quote="&ldquo;That was in 2015, just before the state's passage of what is known as an &ldquo;ag-gag&rdquo; bill, a law that would punish undercover investigators like myself who release evidence of animal mistreatment inside farms and slaughterhouses... When the lines slowed or stopped due to mechanical problems, some would rip feathers from live birds to throw at coworkers. Others would punch birds or even throw them like baseballs into the shackles. One worker pried open a chicken's mouth and stuck a finger down the bird's throat while we waited for the line to restart.&rdquo;"/> 
+
+<Love bc="CornflowerBlue" title="Animal rights activists are charged with felonies for taking a sickly turkey chick from a farm in Sanpete county" link="https://www.sltrib.com/news/2018/05/04/animal-rights-activists-are-charged-with-a-felony-in-sanpete-county-for-taking-a-sickly-turkey-chick/" photo="../assets/Direct-Action-Everywhere-Moroni-turkey-farm.png"/> 
+
+<Love bc="YellowGreen"  title="Smithfield hides mutilation, abuse of animals through intimidation tactics against activists" link="https://www.sltrib.com/news/politics/2018/05/22/a-utah-farm-saw-a-video-of-its-hogs-being-stolen-months-earlier-it-wasnt-the-first-time-the-activists-were-accused-of-livestock-larceny/" photo="../assets/Wayne-Hsiung.png" quote="&ldquo;'Baby pigs are enduring mutilation, starvation and abuse at Smithfield, and the company doesn't want the public to know about it,&rdquo; said Direct Action co-founder Wayne Hsiung, one of the defendants. &ldquo;This is an attempt to intimidate activists who are showing the public the truth about what happens in factory farms.&rdquo;"/> 
+
+
+
+<Love bc="Plum" title="Animal welfare activists facing prison time seek top Utah prosecutor's donor list" link="https://www.sltrib.com/news/politics/2020/07/18/animal-welfare-activists/" photo="../assets/animal-activists.png" quote="&ldquo;One of two California animal welfare activists who face up to 60 years in prison for allegedly stealing pigs from a Beaver County hog farm in 2017 filed a motion in 5th District Court late last month asking a judge to compel Reyes, whose office is involved in prosecuting their case, to disclose his campaign contributions.&rdquo;" /> 
+
+
+
+<SourceList idea="Animal Rights" writer="Stevens, T." date="18 July 2020" title="Animal welfare activists facing prison time seek top Utah prosecutor's donor list" link="https://www.sltrib.com/news/politics/2020/07/18/animal-welfare-activists/" pub="Salt Lake City tribune (sltrib.com)" writer2="Oil Gross" date2="(4 June 2019)" link2="https://www.totallyveganbuzz.com/news/75-vegan-activists-arrested-as-riot-police-meet-600-protesters-at-slaughterhouse/" title2="75 vegan protesters arrested as riot police meet 600 at slaughterhouse" pub="totallyveganbuzz.com" writer3="Unnamed" date3="(20 July 2020)" link3="https://www.trucknews.com/transportation/truck-driver-charged-in-death-of-animal-rights-activist/1003142773/" title3="Truck driver charged in death of animal rights activist" pub3="trucknews.com" writer4="Kirkwood, B." date4="(15 July 2020)" link4="https://vegannews.press/2020/07/15/animal-ag-losing-billions/" title4="Vegan meat sales hit record high, Animal Ag meat sales lowest in 6 years, losing billions" pub4="vegannews.press" writer5="Brown, A." date5="(10 June 2020)" link5="https://theintercept.com/2020/06/10/iowa-animal-rights-crime-ag-gag-law/" photo="assets/iowa-ag-gag-law.png" title5="Iowa quietly passes its 3rd Ag-Gag law after constitutional challenges" pub5="theintercept.com" writer6="Unnamed" date6="(10 July 2020)" link6="https://www.totallyveganbuzz.com/news/joaquin-phoenix-meat-workers-slaughterhouse-abuses/" title6="Joaquin Phoenix calls meatworkers to anonymously report slaughterhouse abuses through online portal" pub6="totallyveganbuzz.com" writer7="Lingel, G." date7="(Undated)" link7="https://sentientmedia.org/factory-farming/" title7="Factory farming: the horrifying secrets behind the scenes" pub7="sentientmedia.org" writer8="Starostinetskaya, A." date8="(23 June 2020)" link8="https://vegnews.com/2020/6/justin-trudeau-announces-100-million-investment-in-canada-s-plant-based-protein-industry" title8="PM Trudeau of Canada just invested one tenth of a billion in meatless meat" pub8="vegnews.com" writer9="Casey, L. & Thompson, N." date9="(19 June 2020)" link9="https://toronto.ctvnews.ca/animal-rights-activist-killed-while-holding-vigil-outside-ontario-slaughterhouse-1.4991704?cache=yes%3FclipId%3D104070%3FclipId%3D375756%2F5-things-to-know-for-tuesday-november-5-2019-1.4670488" title9="Animals rights activist slain while holding vigil outside of Ontario slaughterhouse" pub9="toronto.ctvnews.ca"/>
+
+
+
+
+
+
+
+</div>
+
+        ,
+    blackandwhite
+    )
+
+ReactDOM.render(
+
+<div> 
+
+<Love title="Vegan meat sales spike 280% amid Coronavirus plandemic" link="https://www.totallyveganbuzz.com/news/vegan-meat-sales-spike-280-percent-coronavirus/" photo="../assets/beyond-meat-sausage.png"/>
+
+<Love bc="YellowGreen" title="4 poultry plant execs indicted after 2019 immigration raid" link="https://www.msn.com/en-us/news/us/4-poultry-plant-execs-indicted-after-2019-immigration-raid/ar-BB17EBEB" photo="../assets/poultry-execs-indicted.png" quote="&ldquo;Their announcement happened a day before the one-year anniversary of the raids in which 680 people were arrested at seven poultry plants in central Mississippi.Hurst and Albence also scolded journalists for reports that focused on the arrests separating children from immigrant parents who were sent to detention centers.
+
+&ldquo;If a parent puts their child in that position where they commit a criminal act that subjects them to being arrested and detained ... that responsibility falls on them,&rdquo; Albence said.&rdquo;"/> 
+
+
+<Love title="Iowa quietly passes its 3rd Ag-Gag law after constitutional challenges" link="https://theintercept.com/2020/06/10/iowa-animal-rights-crime-ag-gag-law/" photo="../assets/iowa-ag-gag-law.png" quote="&ldquo;&ldquo;The intent is to silence whistleblowers and those that would expose animal welfare abuses,&rdquo; said Adam Mason, the state policy director for Iowa Citizens for Community Improvement, which has fought two previous ag-gag laws in Iowa courts.&rdquo;" /> 
+<Love title="Joaquin Phoenix calls meatworkers to anonymously report slaughterhouse abuses through online portal" link="https://www.totallyveganbuzz.com/news/joaquin-phoenix-meat-workers-slaughterhouse-abuses/" photo="../assets/joaquin-phoenix.png"/> 
+
+<Love title="2015: Judge strikes down Idaho's Ag Gag Law raising questions for other states" link="https://www.npr.org/sections/thesalt/2015/08/04/429345939/idaho-strikes-down-ag-gag-law-raising-questions-for-other-states" photo="../assets/chickens-in-terror-jail.png" quote="&ldquo;Idaho's so-called &ldquo;ag-gag&rdquo; law, which outlawed undercover investigations of farming operations, is no more. A judge in the federal District Court for Idaho decided Monday that it was unconstitutional, citing First Amendment protections for free speech.
+
+But what about the handful of other states with similar laws on the books?
+
+Laws in Montana, Utah, North Dakota, Missouri, Kansas and Iowa have also made it illegal for activists to smuggle cameras into industrial animal operations. A new North Carolina law goes into effect in January 2016. But now those laws' days could be numbered, according to the lead attorney for the coalition of animal welfare groups that sued the state of Idaho.&rdquo;"/>
+
+ <Love bc="Plum" title="The Berkeley activist who puts her body on the line to fight animal cruelty" link="https://www.berkeleyside.com/2019/12/12/the-berkeley-activist-who-puts-her-body-on-the-line-to-fight-animal-cruelty" photo="../assets/priya-directaction.png"/>
+
+
+<Love bc="YellowGreen" title="Animal Saves Movement condemns charges brought against truck driver &ldquo;it doesn&rsquo;t amount to justice for Regan&rdquo;" link="https://vegannews.press/2020/07/20/regan-russell-murderer-charged/" photo="../assets/animal-saves-graphic-regan.png"/> 
+
+</div>
+        ,
+   possum 
+    );
+
+ReactDOM.render(
+
+     
+<div>
+
+<TextBox bc="Pink" content="Many animals in the wild do not have realistic access to food."/>
+
+<TextBox bc="LightSteelBlue" content="All neighborhoods contain wild life, including the suburbs."/> 
+
+<TextBox bc="Tomato" content="Wilderness can be suburban or rural."/> 
+
+<TextBox bc="DarkSlateGray" content="Stop the passive policies of animal extermination across the United States."/> 
+
+
+
+
+</div>
+        ,
+    fish
+    );
+  </script>
+  </script>
+<br>
+<br>
+
+
+
+
+<div class="react-app" >
+<div id="appanimals1"></div>
+<div id="appanimals2"></div>
+<div id="appanimals3"></div>
+</div>
+
+<!-- ABOVE DIV TAGS ARE RELEVANT TO REACT COMPONENTS PLACEMENT-->
+
+
+
+
+ <nav class="navbar">
+<div hidden > 
+<div class="nav-style"><a href="Animals.html">ANIMALS / SPACE</a></div>
+
+<div class="nav-style"><a href="../freewrite.php">BOOKS / JOURNALISM</a></div>
+
+<div class="nav-style"><a href="5G.html">CCPA / 5G / TECH</a></div>
+
+<div class="nav-style"><a href="Climate.html">CLIMATE STUDIES</a></div>
+
+<div class="nav-style"><a href="../September/My-articles.html">FICTION/ ESSAYS </a></div>
+<div class="nav-style"><a href="homeless.html">HOMELESS / PENSIONS</a></div>
+
+<div class="nav-style"><a href="Border.html">M&egrave;XICO & BORDER</a></div>
+<div class="nav-style"><a href="Moon.php">MOON </a></div>
+
+<div class="nav-style"><a href="Plastics.html">PLASTICS & FRACKING</a></div>
+
+<div class="nav-style"><a href="vaccines-qui-tam.html">Vaccines / Qui Tam</a></div>
+
+</div>
+
+  </nav>
+
+
+<div hidden><a href="#top" class="button">Back to top</a></div>
+<br>
+
+</body>
+</html>

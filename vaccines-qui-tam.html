@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">	
+	<title>"Coronavirus"</title>
+
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/nazi-typewriter" type="text/css"/>
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/avara" type="text/css"/>
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/space-meatball" type="text/css"/>
+<link href="https://fonts.googleapis.com/css
+?family=Alegreya|Anaheim|Assistant|Cinzel|Lobster|Patua+One|Permanent+Marker|Special+Elite" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Charm|Indie+Flower|Lobster|Pacifico" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Anaheim|Exo+2|Montserrat|Noto+Sans" rel="stylesheet"><link href="https://fonts.googleapis.com/css?famsily=Lobster|Lobster+Two" rel="stpenylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Lora|Oxygen|Playfair+Display|Poppins|Quicksand" rel="stylesheet">
+	
+	<link href="../css/drop-down.css" rel="stylesheet"> 
+	<link href="../css/favorites.css" rel="stylesheet">
+        <link href="../css/index.styles.css" rel="stylesheet"> 
+<link href="../css/media-query.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/video-react.css" />
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+
+$(document).ready(function(){
+  $("div.holiday").hover(function(){
+    $(this).css("background-color", "GhostWhite");
+    }, function(){
+    $(this).css("background-color", "Lavender");
+  });
+});
+
+
+		
+
+
+</script>
+
+ <!-- REACT LIBRARY -->
+  <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+  <!-- REACT DOM LIBRARY -->
+  <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+  <!-- BABEL LIBRARY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+
+
+
+<style>
+
+.header { 
+opacity: .9; 
+ 	padding-left: 10px;
+ 	padding-right: 10px; 
+ 	padding-top: 4px;
+ 	padding-bottom: 4px; 
+ 	background-color: White; 
+ 	font-size: 25px;
+	font-family: 'Lobster', cursive;
+color: RebeccaPurple;
+	} 
+
+.old_typewriter {
+   font-family: 'NaziTypewriterRegular';
+   font-weight: normal;
+   font-style: normal;
+}
+
+.avara {
+   font-family: 'AvaraBold';
+   font-weight: normal;
+   font-style: normal;
+}
+
+.space {
+   font-family: 'SpaceMeatballRegular';
+   font-weight: normal;
+   font-style: normal;
+}
+
+img {display:inline;}
+
+
+
+.frame {
+	align-content: center;
+	display: inline;
+}
+
+
+
+
+
+</style>
+
+
+
+</head>
+
+
+<body><a name="top"></a>
+
+
+	<header class="header" >
+		<a href="../index.html">ABFreewrite.com</a>
+	</header>
+
+ <div class="indieflower holiday">Making a future with a future</div></div>
+
+
+
+<!-- DESIGNATED LOCATION TO INSERT REACT CONTENT  -->
+
+  <!-- JAVASCRIPT -->
+  <script type="text/babel">
+
+const blackandwhite= document.getElementById("app2")
+const oyster= document.getElementById("app3")
+const seaotter= document.getElementById("app4")
+
+
+let BasicAudio = function(){
+
+   let mpeg = { 
+         backgroundColor: 'Tomato',
+         color: '#fff',
+         width: 250,
+         padding: 10,
+borderRadius: 4
+}  
+
+
+return(
+<div>
+
+<audio style={mpeg} controls src="audio/NewRecording74.m4a"></audio>
+
+</div>
+);}
+
+let Contact = function(){
+	let button = {
+	backgroundColor: 'GhostWhite',
+        borderRadius: 2,
+        fontFamily: 'Indie Flower',
+        boxShadow: '10px 10px 5px #888888',
+        paddingLeft: 20,
+paddingRight: 20,
+paddingTop: 10,
+paddingBottom: 10
+
+	}
+
+
+const space= { 
+
+width: '99%',
+textAlign: 'center',
+height: 111,
+backgroundColor: 'White'
+}
+
+
+return(
+        <div>
+<section style={space}>
+	<a href="contact.html" style={button} id="solo">Contact</a>
+</section>
+
+</div>
+	); 
+} 
+
+
+
+
+
+let Videoart = function(){
+
+   let mp4 = { 
+         backgroundColor: 'DimGray',
+         color: '#fff',
+         width: 320,
+         height:220,
+         padding: 5,
+         borderRadius: 4
+}  
+
+
+return(
+<div>
+
+<video style={mp4} controls><source src="assets/lockdowntiktok.mp4" type="video/mp4"/></video>
+
+</div>
+);}
+
+
+
+let TextBox = function(props) {
+   let TBColor = {
+      backgroundColor: props.bc, 
+
+color: 'GhostWhite',
+borderRadius: 4,
+padding: 2,
+width: props.width,
+textAlign: 'center',
+fontFamily: props.font, 
+height:props.pixheight
+}
+
+let sanseriffont ={
+marginTop: -7, 
+ fontSize: 17,
+color: 'GhostWhite',
+backgroundColor: 'Tomato',
+fontFamily: 'Quicksand'
+}
+
+
+return(
+  <div>
+<main style={TBColor}><h2><a href={props.insitelink}>{props.content}</a></h2><p style={sanseriffont}>{props.smalltext}</p></main>
+</div>
+);
+} 
+
+
+let Source = function(props) {
+	let journo = {
+backgroundColor: 'GhostWhite',
+color: 'DimGray'}
+
+        let topline = {
+         width: 315} 
+
+	let date= {
+padding: 2}
+
+	let title = { 
+padding: 2}
+
+	return(
+		<div>
+			<div style={topline}>
+                        <abbr style={journo}>{props.writer}</abbr>
+                        <strong style={date}>{props.date}</strong>
+			<a href={props.link}>
+                        <cite style={title}>{props.title}</cite>
+                        </a></div>
+			<label>{props.pub}</label>
+                        <p style={journo}>{props.quote}</p>
+		</div>
+	); 
+
+}
+
+
+
+let SourceList = function(props) {
+ 
+      let idea = {
+       
+        fontFamily: 'SpaceMeatballRegular' 
+} 
+
+return(
+<div>
+<h3 style={idea}>{props.idea}</h3>
+<ol>
+<li><Source writer={props.writer} date={props.date} title={props.title} link={props.link} pub={props.pub} quote={props.quote}/></li>
+<li><Source writer={props.writer2} date={props.date2} title={props.title2} link={props.link2} pub={props.pub2} quote={props.quote2}/></li>
+<li><Source writer={props.writer3} date={props.date3} title={props.title3} link={props.link3} pub={props.pub3} quote={props.quote3}/></li>
+<li><Source writer={props.writer4} date={props.date4} title={props.title4} link={props.link4} pub={props.pub4} quote={props.quote4}/></li>
+<li><Source writer={props.writer5} date={props.date5} title={props.title5} link={props.link5} pub={props.pub5} quote={props.quote5}/></li>
+<li><Source writer={props.writer6} date={props.date6} title={props.title6} link={props.link6} pub={props.pub6} quote={props.quote6}/></li>
+<li><Source writer={props.writer7} date={props.date7} title={props.title7} link={props.link7} pub={props.pub7} quote={props.quote7}/></li>
+<li><Source writer={props.writer8} date={props.date8} title={props.title8} link={props.link8} pub={props.pub8} quote={props.quote8}/></li>
+<li><Source writer={props.writer9} date={props.date9} title={props.title9} link={props.link9} pub={props.pub9} quote={props.quote9}/></li>
+
+</ol>
+</div>
+
+);
+
+}
+
+
+
+
+var Facts = function(props) {
+    var factbox = {
+backgroundColor: '#fff', 
+color: '#000',
+fontSize: 14,
+fontFamily: 'Quicksand', 
+marginTop: '',
+marginLeft: '30px',
+width: '75%'
+
+} 
+
+return(
+<div>
+<div style={factbox}>
+<ul>
+<li><a href={props.link1}>{props.listitem1}</a></li>
+<li><a href={props.link2}>{props.listitem2}</a></li>
+<li><a href={props.link3}>{props.listitem3}</a></li>
+<li><a href={props.link4}>{props.listitem4}</a></li>
+
+</ul>
+</div>
+</div>); } 
+
+
+
+let Calendar = function(props){
+   
+    return(
+  <div>
+    
+      <TextBox bc="Tomato" tb="Tomato" content={props.content}/> 
+      <img src={props.image} />
+
+<Facts listitem1={props.listitem1} listitem2={props.listitem2} listitem3={props.listitem3} listitem4={props.listitem4}/> 
+         
+         
+  </div>
+);
+}
+
+
+
+
+let Number= function(props) {
+   let innerColor = {
+       backgroundColor: 'PaleGoldenRod',
+      fontSize: 12, 
+marginRight: 25,
+color: 'Green',
+borderRadius: 10,
+padding: 10,
+width: 70,
+fontFamily: 'Quicksand', 
+height: props.pixheight
+}
+
+let sanseriffont ={
+marginTop: -7, 
+ fontSize: 17,
+color: 'Green',
+fontFamily: 'Quicksand'
+}
+
+
+return(
+  <div>
+<main style={innerColor}><h1><a href={props.insitelink}>{props.content}</a></h1><p style={sanseriffont}>{props.smalltext}</p></main>
+</div>
+);
+} 
+
+let Image = function(props) {
+   var singleImg = {height: 220, width:320}
+return(
+<img src={props.img} style={singleImg} /> 
+);
+}
+
+
+let Love = function(props) {
+
+      let odds = {
+                display: 'inline-block', 
+                backgroundColor: props.bc, 
+                color: props.colour,
+		borderRadius: 20, 
+		fontFamily: props.font, 
+		
+		width: props.width, 
+		padding: 5,
+                marginTop: props.top}
+
+
+      var blockStyle= {
+		fontSize: 14,
+                fontFamily: 'Quicksand',
+		backgroundColor: '#fff'}
+
+      var average = {
+               width: props.pixwidth, 
+               height: props.pixheight, 
+               marginBottom: 3}
+
+ var icon = {
+     marginTop: -100
+}
+
+      return(
+      <div>
+        	
+        			<table><tr>
+                                     <td>
+                                       <h3 style={odds}><img style={icon} src={props.icon}/>
+                                        <a href={props.link}> {props.title}</a></h3>
+                                         
+        				<img src={props.photo} alt={props.alt} style={average}/>
+        				
+        		<blockquote style={{width: '245px', marginLeft: '-2', padding: '12', fontFamily: 'Lora', fontSize: '17', backgroundColor: 'GhostWhite', borderBottom: '3px dotted red', borderLeft: '3px dotted CadetBlue', borderRight: '3px dotted CadetBlue'}}>{props.quote}</blockquote>
+        			</td>
+
+        			
+        		</tr>
+        		
+
+      		</table>
+  		</div>
+      );
+    }
+
+
+
+let Freewrite = function(props){
+
+   var fillColor = {
+           backgroundColor: props.bkgd,
+           fontFamily: 'Quicksand', 
+           color: props.Fclr, 
+           width: 320,
+      
+           padding: 9,  
+           border: '2px dotted Tomato',
+           borderRadius: 2
+} 
+
+
+
+return(
+<div>
+  <main>
+    <div style={fillColor}>
+       <h2>{props.bold}</h2>
+       <h4>{props.date}</h4>
+          <div>{props.article}</div>
+    </div>
+  </main>
+
+</div>
+);  
+}
+
+
+
+
+let French = function(props) {
+  let boite = {
+    backgroundColor : 'Green',
+boxShadow: '10px 10px 5px #888888',
+        paddingLeft: 20,
+paddingRight: 20,
+paddingTop: 10,
+paddingBottom: 10,
+color: 'AliceBlue', 
+    width: '300', 
+    
+borderRadius: 15,
+fontSize: 15,
+fontFamily: 'Quicksand', 
+paddingLeft: 10, 
+paddingRight: 10, 
+marginTop: 10
+
+}
+
+return(
+<div>
+  <table style={boite}>
+    
+    <tr><td>{props.french}</td></tr>
+<tr><td>"{props.pronunciation}"</td></tr>
+<tr><td>{props.translation}</td></tr>
+  </table>
+</div>
+); 
+
+}
+
+
+
+class JSXblockquote extends React.Component { 
+	render() {
+		var blockStyle= {
+
+			fontSize: 15,
+                        borderRadius: 5,
+                        fontFamily: 'Quicksand', 
+			color: '#000',
+			fontWeight: 'bold',
+                        backgroundColor: 'AliceBlue', 
+                        padding: 5,
+                        width: 275
+		}
+		return (
+			<blockquote style={blockStyle}>&ldquo;{this.props.quotation}</blockquote>
+
+			); 
+	}
+} 
+
+
+Love.defaultProps = {
+   bc: 'LightGray', 
+   width: 306,
+   pixwidth: 310,
+   pixheight: 229,
+   font: 'Avara'
+} 
+
+TextBox.defaultProps = {
+   bc: 'Tomato',
+font: 'Quicksand',
+width: 245
+
+}
+    
+    ReactDOM.render(
+
+     
+<div>
+
+<iframe width="330" height="230" src="https://www.bitchute.com/embed/4u7rt61YeGox/"></iframe>
+
+<Love title="When profits and politics drive science: The hazards of rushing a vaccine at 'warp speed'" link="https://www.opednews.com/articles/When-Profits-and-Politics-by-Ellen-Brown-Covid19_Health-200703-486.html" photo="../assets/vaccine-prep.png"/>
+
+<Love title="Vaccines cause gene mutations" link="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1867082/" photo="../assets/dna-double-helix.jpg" quote="&ldquo;We retrospectively studied 14 patients with alleged vaccine encephalopathy in whom the first seizure occurred within 72 h of vaccination. We reviewed the relation to vaccination from source records and assessed the specific epilepsy phenotype. Mutations in SCN1A were identified by PCR amplification and denaturing high performance liquid chromatography analysis, with subsequent sequencing. Parental DNA was examined to ascertain the origin of the mutation.&rdquo;"/> 
+
+<Love title="Pharma giant Sanofi charged with manslaughter in birth defects drug scandal" link="https://www.rfi.fr/en/france/20200804-pharma-giant-sanofi-charged-manslaughter-birth-defects-drug-scandal-epilepsy"  photo="../assets/sanofi.png" quote="&ldquo;The charges relate to the Sanofi drug valproate, marketed in France under the trade name Depakine and other generic versions since 1967. It is commonly prescribed to people suffering from epilepsy, migraines and bipolar disorder.
+
+However, when taken by mothers-to-be it can increase the chances of their children having birth defects, autism and learning difficulties.
+
+Health authorities say the French company failed to warn pregnant mothers about the risks.&rdquo;"/> 
+
+<Love title="36 PPP Fraud Prosecutions So Far, and Counting" link="https://smallbiztrends.com/2020/08/ppp-fraud.html" photo="../assets/ppp-fraud.jpg"/>
+
+<Love title="PPP Loans Granted To Dozens Of NY Companies With History Of Fraud And Other Violations" link="https://gothamist.com/news/ppp-loans-granted-dozens-ny-companies-history-fraud-and-other-violations" photo="../assets/ppp-forgiveness.png"/>
+
+<Love title="Sanofi, other drugmakers accused of intentionally hiding carcinogen in Zantac" link="https://www.beckershospitalreview.com/pharmacy/sanofi-other-drugmakers-accused-of-intentionally-hiding-carcinogen-in-zantac.html"  photo="../assets/sanofi-lawsuit.jpg"/>
+
+<Love title="Moderna gets further $472 million award from Trump admin for vaccine development, $955 million total" link="https://www.usnews.com/news/top-news/articles/2020-07-26/moderna-gets-further-472-million-us-award-for-coronavirus-vaccine-development" photo="../assets/mmr-vaccines-fetal-cell.png"/>
+
+<Love title="Recent Discovery in the Cure for Herpes is Overshadowed by the Covid -19 Quest for a Vaccine" link="https://www.globenewswire.com/news-release/2020/07/07/2058825/0/en/Recent-Discovery-in-the-Cure-for-Herpes-is-Overshadowed-by-the-Covid-19-Quest-for-a-Vaccine.html" photo="../assets/herpes-medicine.jpg"/>
+
+
+<Love title="Vaccine Adverse Effect Reporting System" link="https://vaers.hhs.gov/" photo="../assets/VAERS.png"/>  
+
+ 
+<Love title="Court rules vaccine contributed to autism symptoms" link="https://abc7chicago.com/archive/6003909/" photo="../assets/vaccine-side.jpg"/> 
+
+
+ <Love title="Parents of Vaccine-Injured Children Speak Out: 'The Guilt Is Huge'" link="https://www.yahoo.com/news/parents-of-vaccine-injured-children-speak-out-110904439577.html" photo="../assets/vaccine-victims.png" quote="&ldquo;When Susan Lawson of Colorado hears parents declaring, unequivocally, that everyone should vaccinate their children because it's perfectly safe, she says it feels &ldquo;like a punch in the gut.&rdquo; That's because she's seen another side of the story: Her daughter Julia, now 9, was left with permanent brain damage - an injury acknowledged by a federal court payout - after receiving her MMRV (measles-mumps-rubella-varicella) shot when she was a year old.&rdquo;" />
+
+
+
+</div> 
+
+        ,
+    blackandwhite
+    );
+
+
+
+ReactDOM.render(
+
+<div>
+
+<Love title="COVID-19 era highlights U.S. 'black hole' compensation fund for pandemic vaccine injuries" link="https://www.reuters.com/article/us-health-coronavirus-vaccines-liability/covid-19-era-highlights-u-s-black-hole-compensation-fund-for-pandemic-vaccine-injuries-idUSKBN25H1E8" photo="../assets/covid-vaccine-syringe-nurse-in-goggles.png"/> 
+
+<Love title="The marketing of children's blood: adrenochrome goes mainstream on Turkish TV" link="https://vaccineimpact.com/2020/the-marketing-of-childrens-blood-adrenochrome-goes-mainstream-on-turkish-tv-news/"  photo="../assets/adrenochrome.png" quote="&ldquo;Paypal founder Peter Thiel has a gruesome plan to achieve eternal life - by injecting the blood of teenagers.
+
+The practice, known as parabiosis, is not as impossible as it seems  in 2016, a start up firm called Ambrosia started offering transfusions of &ldquo;young plasma&rdquo; for (British pounds)6,000 a time.
+
+The billionaire mogul, 53, has said: &ldquo;I'm looking into parabiosis stuff, which I think is really interesting. This is where they did the young blood into older mice and they found it had a massive rejuvenating effect.&rdquo;&rdquo;" /> 
+
+<Love bc="Plum" title="Corrupt: AstraZeneca, Public Institutions, and the Coronavirus Vaccine Drive" link="https://www.counterpunch.org/2020/06/18/corrupt-propositions-astrazeneca-public-institutions-and-the-coronavirus-vaccine-drive/" photo="../assets/astra-zeneca-glass.png"/> 
+
+
+
+<Love title="Watchdog groups want Trump's coronavirus vaccine czar to disclose all pharma ties" link="https://thehill.com/policy/healthcare/500018-watchdog-groups-want-trumps-coronavirus-vaccine-czar-to-disclose-all-pharma" photo="../assets/vaccine-czar.png" quote="&ldquo;Moncef Slaoui, who leads &ldquo;Operation Warp Speed,&rdquo; the administration's initiative to find a COVID-19 vaccine, has extensive ties to the pharmaceutical industry and has come under fire from advocates and Democrats including Sen. Elizabeth Warren (Mass.) for potential conflicts of interest. 
+
+However, his position in the administration is on a contract and he is not considered a government employee. As such, he is not subject to the same federal disclosure rules that would require him to list his stock holdings and other potential conflicts.&rdquo; "/> 
+
+
+<Love title="Protesters rally in Albany against mandatory COVID-19 vaccines" link="https://wnyt.com/albany-new-york-news/protesters-rallied-in-albany-against-mandatory-covid-vaccines-/5759757/" photo="../assets/albany-no-vaccines.png"/> 
+
+
+
+<Love bc="CornflowerBlue" title="Brain study finds evidence that Autism involves too many synapses in the brain" link="https://www.autismspeaks.org/science-news/brain-study-finds-evidence-autism-involves-too-many-synapses" photo="../assets/brain-synapses.jpg"/>
+
+
+
+<Love title="Fact Check: Medicare pays hospitals more money for COVID-19 patients" link="https://www.usatoday.com/story/news/factcheck/2020/04/24/fact-check-medicare-hospitals-paid-more-covid-19-patients-coronavirus/3000638001/" photo="../assets/dude-on-ventilator.png" quote="&ldquo;Jensen said, &ldquo;Hospital administrators might well want to see COVID-19 attached to a discharge summary or a death certificate. Why? Because if it's a straightforward, garden-variety pneumonia that a person is admitted to the hospital for - if they're Medicare - typically, the diagnosis-related group lump sum payment would be $5,000. But if it's COVID-19 pneumonia, then it's $13,000, and if that COVID-19 pneumonia patient ends up on a ventilator, it goes up to $39,000.&rdquo;&rdquo;" />
+
+<Love title="Kennedy exposes Dr. Fauci's connection to Wuhan lab, Fort Detrick, and role in spawning mutant strain of Coronavirus" link="https://fort-russ.com/2020/04/breaking-kennedy-exposes-dr-faucis-role-in-creating-highly-infectious-mutant-strain-of-coronavirus/" photo="../assets/fauci-kennedy.png"/> 
+
+
+</div>
+        ,
+   oyster
+    );
+
+
+ReactDOM.render(
+
+     
+<div>
+
+<Love title="Alex Baldwin hosts hour long Instagram chat with anti-vaccine activist Robert F. Kennedy,Jr." link="https://www.msn.com/en-us/entertainment/entertainment-celebrity/alec-baldwin-hosts-hour-long-chat-with-anti-vaccine-activist-robert-f-kennedy-jr/ar-BB17I7PM" photo="../assets/alec-baldwin-robert-f-kennedy-hilaria-thomas.png" quote="" />
+
+<Love title="Exclusive: A quarter of Americans are hesitant about coronavirus vaccine- Reuters/ Ipsos poll" link="https://www.reuters.com/article/us-health-coronavirus-vaccine-poll-exclu/exclusive-a-quarter-of-americans-are-hesitant-about-a-coronavirus-vaccine-reuters-ipsos-poll-idUSKBN22X19G" photo="../assets/people-in-masks-street-corner.png"/> 
+ 
+
+ <Love title="India part of GAVI's new COVID-19 vaccine drive" link="https://www.ndtv.com/india-news/coronavirus-india-part-of-gavis-new-covid-19-global-vaccine-access-drive-2272305" photo="../assets/GAVI-gloved-hand-vaccine-vials.png" quote="&ldquo;Prime Minister Narendra Modi had pledged USD 15-million as India's contribution to Gavi, the Vaccine Alliance....The COVAX Advance Market Commitment (AMC) forms part of the COVAX Facility, a mechanism hosted by Gavi, the Vaccine Alliance, designed to guarantee rapid, fair and equitable access to COVID-19 vaccines for every country in the world. &rdquo;" /> 
+
+<Love title="Lawsuit filed against Palm Beach County for mask mandate" link="https://www.msn.com/en-us/news/us/lawsuit-filed-against-palm-beach-county-for-mask-mandate/ar-BB16aw3o" photo="../assets/palm-mask.png"/>
+
+<Love title="Vanderbilt's Center for Technology Transfer & Commercialization breaks record for COVID related agreements" link="https://news.vanderbilt.edu/2020/07/09/center-for-technology-transfer-commercialization-breaks-records-in-rapid-facilitation-of-covid-19-related-agreements/" photo="../assets/padma-raghavan-vanderbilt-tech-transfer-patents.png" pixheight="300" pixwidth="204" quote="&ldquo;Typically, a single complex license agreement's negotiation and completion can stretch into nine months and a single MTA can take up to three weeks to complete. In contrast, CTTC completed the agreements in as few as 10 days or 24 hours, respectively.&rdquo;" /> 
+
+
+<Love title="Bayh-Dole Act of 1980 a.k.a Government Patent Policy Act" link="https://en.wikipedia.org/wiki/Bayh%E2%80%93Dole_Act" photo="../assets/bayh-dole-act.png" quote="It has to do with patents and technology transfer from universities. The Bayh Dole Act allows companies to take advantage of taxpayer funded research." /> 
+
+<Love title="On this day, the Supreme Court rules on vaccines, public health - February 20, 1905" link="https://constitutioncenter.org/blog/on-this-day-the-supreme-court-rules-on-vaccines-and-public-health" photo="../assets/jacobsen-v-mass.png"/>
+
+
+
+<Love bc="Plum" title="Little girl chokes on face mask baked into her Chicken McNuggets" link="https://nypost.com/2020/08/05/little-girl-chokes-on-face-mask-found-in-chicken-mcnuggets/" photo="../assets/chicken-mcnugget.png" quote="&ldquo;I put my fingers down her throat to loop it out of there - and she was just blue with the sick,&rdquo; recalled the distraught mom, claiming she found fragments of the disposable face mask in two of their 20 fried chicken pieces. The personal protective equipment (PPE) was &ldquo;cooked into it, like a part of the mixture,&rdquo; the BBC reported.&rdquo;" /> 
+
+
+
+</div>
+        ,
+    seaotter
+    );
+  </script>
+  </script>
+<br>
+<br>
+
+
+
+
+<div class="react-app" >
+<div id="app2"></div>
+<div id="app3"></div>
+<div id="app4"></div>
+</div>
+
+<!-- ABOVE DIV TAGS ARE RELEVANT TO REACT COMPONENTS PLACEMENT-->
+
+
+
+
+ 
+
+
+
+	
+
+
+
+<div><a href="#top" class="button">Back to top</a></div>
+<br>
+
+	<script src="js/array.js"></script>
+
+
+</body>
+</html>
