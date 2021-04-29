@@ -1,0 +1,21 @@
+
+
+.books {
+    background-color: cadetblue;
+    color: #000;
+    
+    
+}
+
+.inLine {
+   
+    display: inline-block;
+   
+
+}
+
+.size {
+    width: 250px;
+    height: 386px;
+}
+

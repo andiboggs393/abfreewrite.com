@@ -1,735 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-
-	<meta charset="UTF-8"> 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">	
-	<title>AB Freewrite</title>
-
-<link rel="stylesheet" media="W" href="h<ttps://fontlibrary.org/face/nazi-typewriter" type="text/css"/>
-<link rel="styl-esheet" media="screen" href="https://fontlibrary.org/face/avara" type="text/css"/>
-<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/space-meatball" type="text/css"/>
-<link href="https://fonts.googleapis.com/css
-?family=Alegreya|Anaheim|Assistant|Cinzel|Lobster|Patua+One|Permanent+Marker|Special+Elite" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css?family=Charm|Indie+Flower|Lobster|Pacifico" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans&display=swap" rel="stylesheet">
-	<link href="https://fonts.com/css?family=Anaheim|Exo+2|Montserrat|Noto+Sans" rel="stylesheet"><link href="https://fonts.googleapis.com/css?famsily=Lobster|Lobster+Two" rel="stpenylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Lato|Lora|Oxygen|Playfair+Display|Poppins|Quicksand" rel="stylesheet">
-	<link href="css/loading.css" rel="stylesheet">
-	<link href="css/drop-down.css" rel="stylesheet"> 
-	<link href="css/favorites.css" rel="stylesheet">
-        <link href="css/index.styles.css" rel="stylesheet"> 
-<link href="css/media-query.css" rel="stylesheet">
-<link rel="stylesheet" href="/css/video-react.css" />
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-
-
-$(document).ready(function(){
-  $("div.holiday").hover(function(){
-    $(this).css("background-color", "GhostWhite");
-    }, function(){
-    $(this).css("background-color", "Lavender");
-  });
-});
-
-
-} 
-		
-
-</script>
-
- 
-
- <!-- REACT LIBRARY -->
-  <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
-  <!-- REACT DOM LIBRARY -->
-  <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
-  <!-- BABEL LIBRARY -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
-
-
-
-<style>
-
-body {
-background-color: #000;
-color: CornflowerBlue;
-font-size: 20px;
-font-family: Poppins, sans-serif;
-
-} 
-
-.interests { font-size: 14px;
-font-family: Poppins, sans-serif; } 
-
-a {
-color: white; 
-} 
-
-a:link {
-text-decoration: none;
-} 
-
-a:hover {
-color: white;
-} 
-
-.header { 
-opacity: .9; 
- 	 10px;
- 	padding-right: 10px; 
- 	padding-top: 4px;
- 	padding-bottom: 4px; 
- 	background-color: White; 
- 	font-size: 25px;
-	font-family: 'Lobster', cursive;
-color: RebeccaPurple;
-	} 
-
-.old_typewriter {
-   font-family: 'NaziTypewriterRegular';
-   font-weight: normal;
-   font-style: normal;
-}
-
-.avara {
-   font-family: 'AvaraBold';
-   font-weight: normal;
-   font-style: normal;
-}
-
-.space {
-   font-family: 'SpaceMeatballRegular';
-   font-weight: normal;
-   font-style: normal;
-}
-
-img {display:inline;}
-
-
-
-.frame {
-	align-content: center;
-	display: inline;
-}
-
-.button33 {
-
-font-size: 18px; 
-cursor: pointer; 
-padding-left: 28px;
-padding-top: 12px;
-padding-right: 28px;
-padding-bottom: 12px; 
-margin-top: 100px; 
-margin-left: auto;
-margin-right: auto; 
-} 
-
-#myDIV {
-	display: none;
-  width: 33%;
-  padding: 50px 0;
-  text-align: center;
-  background-color: red;
-  margin-top: 20px;
-}
-
-.text {color: aliceblue; font-size: 20px; border-radius: 10px; }
-
-main {
-display: flex;
- align-items: center; 
-flex-direction: column; 
-}
-
-
-
-</style>
-
-
-</head>
-
-<body><a name="top"></a>
-
-	<header class="header" >
-		<a href="index.html">ABFreewrite.com</a>
-	</header>
-
- <div hidden class="indieflower holiday"><a href="February2019/predictive-policing.html">Q/P = R</a></div></div>
-
-
-<div class="form">
-
-<form action="Welcome2.php" method="post">
-Name: <input type="text" name="name" maxlength="15" id="username" required>
-<span id="asterisk"></span>
-<div id="feedback"></div>
-E-mail: <input type="text" name="email" maxlength="27" id="email" required>
-<div id="reqd"></div>
-<p>Interests: <br>
-<section class="interests">
-<input type="checkbox" name="news__subject"  value=" Conspiracy " /> Conspiracy Theories
-<input type="checkbox" name="news__subject" value=" Animal Rights" /> Animal Rights 
-<input type="checkbox" name="news__subject" value="Technology" /> Technology
-<input type="checkbox" name="news__subject" value="Coronavirus" /> Coronavirus corruption
-</section>
-</p>
-
- 
-Comment: <textarea name="comment" maxlength="75" id="comments" required></textarea>
-
-<div id="warning"></div>
-
-
-<input type="submit" name="formSubmit" value="Submit">
-</form></div>
-
-
-
-
-
-
-
-
-
-
-<!-- DESIGNATED LOCATION TO INSERT REACT CONTENT  -->
-
-  <!-- JAVASCRIPT -->
-  <script type="text/babel">
-
-const blackandwhite= document.getElementById("app2")
-const oyster= document.getElementById("app3")
-const seaotter= document.getElementById("app4")
-
-let Love = function(props) {
-
-      let odds = {
-                display: 'inline-block', 
-                backgroundColor: props.bc, 
-                color: props.colour,
-		borderRadius: 20, 
-		fontFamily: props.font, 
-		
-		width: props.width, 
-		padding: 5,
-                marginTop: props.top}
-
-
-      var blockStyle= {
-		fontSize: 14,
-                fontFamily: 'Quicksand',
-		backgroundColor: '#fff'}
-
-      var average = {
-               width: props.pixwidth, 
-               height: props.pixheight, 
-               marginBottom: 3}
-
- var icon = {
-     marginTop: -100
-}
-
-      return(
-      <div>
-        	
-        			<table><tr>
-                                     <td>
-                                       <h3 style={odds}><img style={icon} src={props.icon}/>
-                                        <a href={props.link}> {props.title}</a></h3>
-                                         
-        				<img src={props.photo} alt={props.alt} style={average}/>
-        				
-        		<blockquote style={{width: '245px', marginLeft: '-2', padding: '12', fontFamily: 'Lora', fontSize: '17', backgroundColor: 'GhostWhite', borderBottom: '3px dotted red', borderLeft: '3px dotted CadetBlue', borderRight: '3px dotted CadetBlue'}}>{props.quote}</blockquote>
-        			</td>
-
-        			
-        		</tr>
-        		
-
-      		</table>
-  		</div>
-      );
-    }
-
-let BasicAudio = function(){
-
-   let mpeg = { 
-         backgroundColor: 'Tomato',
-         color: '#fff',
-         width: 250,
-         padding: 10,
-borderRadius: 4
-}  
-
-return(
-<div>
-
-<audio style={mpeg} controls src="audio/NewRecording74.m4a"></audio>
-
-</div>
-);}
-
-let Contact = function(){
-	let button = {
-	backgroundColor: 'GhostWhite',
-        borderRadius: 2,
-        fontFamily: 'Indie Flower',
-        boxShadow: '10px 10px 5px #888888',
-        paddingLeft: 20,
-paddingRight: 20,
-paddingTop: 10,
-paddingBottom: 10
-
-	}
-
-const space= { 
-
-width: '99%',
-textAlign: 'center',
-height: 111,
-backgroundColor: 'White'
-}
-
-
-return(
-        <div>
-<section style={space}>
-	<a href="contact.html" style={button} id="solo">Contact</a>
-</section>
-
-</div>
-	); 
-} 
-
-
-let Videoart = function(){
-
-   let mp4 = { 
-         backgroundColor: 'DimGray',
-         color: '#fff',
-         width: 320,
-         height:220,
-         padding: 5,
-         borderRadius: 4
-}  
-
-
-return(
-<div>
-
-<video style={mp4} controls><source src="assets/lockdowntiktok.mp4" type="video/mp4"/></video>
-
-</div>
-);}
-
-
-
-let TextBox = function(props) {
-   let TBColor = {
-      backgroundColor: props.bc, 
-
-color: 'GhostWhite',
-borderRadius: 4,
-padding: 2,
-width: props.width,
-textAlign: 'center',
-fontFamily: props.font, 
-height:props.pixheight
-}
-
-let sanseriffont ={
-marginTop: -7, 
- fontSize: 17,
-color: 'GhostWhite',
-backgroundColor: 'Tomato',
-fontFamily: 'Quicksand'
-}
-
-
-return(
-  <div>
-<main onClick={() => {
-        console.log('I was clicked')
-      }} style={TBColor}><h2><a href={props.insitelink}>{props.content}</a></h2><p style={sanseriffont}>{props.smalltext}</p></main>
-</div>
-);
-} 
-
-
-let Source = function(props) {
-	let journo = {
-backgroundColor: 'GhostWhite',
-color: 'DimGray'}
-
-        let topline = {
-         width: 315} 
-
-	let date= {
-padding: 2}
-
-	let title = { 
-padding: 2}
-
-	return(
-		<div>
-			<div style={topline}>
-                        <abbr style={journo}>{props.writer}</abbr>
-                        <strong style={date}>{props.date}</strong>
-			<a href={props.link}>
-                        <cite style={title}>{props.title}</cite>
-                        </a></div>
-			<label>{props.pub}</label>
-                        <p style={journo}>{props.quote}</p>
-		</div>
-	); 
-
-}
-
-
-
-let SourceList = function(props) {
- 
-      let idea = {
-       
-        fontFamily: 'SpaceMeatballRegular' 
-} 
-
-return(
-<div>
-<h3 style={idea}>{props.idea}</h3>
-<ol>
-<li><Source writer={props.writer} date={props.date} title={props.title} link={props.link} pub={props.pub} quote={props.quote}/></li>
-<li><Source writer={props.writer2} date={props.date2} title={props.title2} link={props.link2} pub={props.pub2} quote={props.quote2}/></li>
-<li><Source writer={props.writer3} date={props.date3} title={props.title3} link={props.link3} pub={props.pub3} quote={props.quote3}/></li>
-<li><Source writer={props.writer4} date={props.date4} title={props.title4} link={props.link4} pub={props.pub4} quote={props.quote4}/></li>
-<li><Source writer={props.writer5} date={props.date5} title={props.title5} link={props.link5} pub={props.pub5} quote={props.quote5}/></li>
-<li><Source writer={props.writer6} date={props.date6} title={props.title6} link={props.link6} pub={props.pub6} quote={props.quote6}/></li>
-<li><Source writer={props.writer7} date={props.date7} title={props.title7} link={props.link7} pub={props.pub7} quote={props.quote7}/></li>
-<li><Source writer={props.writer8} date={props.date8} title={props.title8} link={props.link8} pub={props.pub8} quote={props.quote8}/></li>
-<li><Source writer={props.writer9} date={props.date9} title={props.title9} link={props.link9} pub={props.pub9} quote={props.quote9}/></li>
-
-</ol>
-
-
-</div>
-
-);
-
-}
-
-
-var Facts = function(props) {
-    var factbox = {
-backgroundColor: '#fff', 
-color: '#000',
-fontSize: 14,
-fontFamily: 'Quicksand', 
-marginTop: '',
-marginLeft: '30px',
-width: '75%'
-
-} 
-
-return(
-<div>
-<div style={factbox}>
-<ul>
-<li><a href={props.link1}>{props.listitem1}</a></li>
-<li><a href={props.link2}>{props.listitem2}</a></li>
-<li><a href={props.link3}>{props.listitem3}</a></li>
-<li><a href={props.link4}>{props.listitem4}</a></li>
-
-</ul>
-</div>
-</div>); } 
-
-
-
-let Calendar = function(props){
-   
-    return(
-  <div>
-    
-      <TextBox bc="Tomato" tb="Tomato" content={props.content}/> 
-      <img src={props.image} />
-
-<Facts listitem1={props.listitem1} listitem2={props.listitem2} listitem3={props.listitem3} listitem4={props.listitem4}/> 
-         
-         
-  </div>
-);
-}
-
-
-let Number= function(props) {
-   let innerColor = {
-       backgroundColor: 'PaleGoldenRod',
-      fontSize: 12, 
-marginRight: 25,
-color: 'Green',
-borderRadius: 10,
-padding: 10,
-width: 70,
-fontFamily: 'Quicksand', 
-height: props.pixheight
-}
-
-let sanseriffont ={
-marginTop: -7, 
- fontSize: 17,
-color: 'Green',
-fontFamily: 'Quicksand'
-}
-
-
-return(
-  <div>
-<main style={innerColor}><h1><a href={props.insitelink}>{props.content}</a></h1><p style={sanseriffont}>{props.smalltext}</p></main>
-</div>
-);
-} 
-
-let Image = function(props) {
-   var singleImg = {height: 220, width:320}
-return(
-<img src={props.img} style={singleImg} /> 
-);
-}
-
-
-
-let Freewrite = function(props){
-
-   var fillColor = {
-           backgroundColor: props.bkgd,
-           fontFamily: 'Quicksand', 
-           color: props.Fclr, 
-           width: 320,
-      
-           padding: 9,  
-           border: '2px dotted Tomato',
-           borderRadius: 2
-} 
-
-
-
-return(
-<div>
-  <main>
-    <div style={fillColor}>
-       <h2>{props.bold}</h2>
-       <h4>{props.date}</h4>
-          <div>{props.article}</div>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.2.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.2.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.2.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/8.2.0/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/8.2.0/firebase-functions.js"></script>
+    <script defer src="/__/firebase/8.2.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/8.2.0/firebase-storage.js"></script>
+    <script defer src="/__/firebase/8.2.0/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/8.2.0/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/8.2.0/firebase-performance.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message">
+      <h2>Welcome</h2>
+      <h1>Firebase Hosting Setup Complete</h1>
+      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
+      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
     </div>
-  </main>
-
-</div>
-);  
-}
-
-
-
-
-let French = function(props) {
-  let boite = {
-    backgroundColor : 'Green',
-boxShadow: '10px 10px 5px #888888',
-        paddingLeft: 20,
-paddingRight: 20,
-paddingTop: 10,
-paddingBottom: 10,
-color: 'AliceBlue', 
-    width: '300', 
-    
-borderRadius: 15,
-fontSize: 15,
-fontFamily: 'Quicksand', 
-paddingLeft: 10, 
-paddingRight: 10, 
-marginTop: 10
-
-}
-
-return(
-<div>
-  <table style={boite}>
-    
-    <tr><td>{props.french}</td></tr>
-<tr><td>"{props.pronunciation}"</td></tr>
-<tr><td>{props.translation}</td></tr>
-  </table>
-</div>
-); 
-
-}
-
-
-
-class JSXblockquote extends React.Component { 
-	render() {
-		var blockStyle= {
-
-			fontSize: 15,
-                        borderRadius: 5,
-                        fontFamily: 'Quicksand', 
-			color: '#000',
-			fontWeight: 'bold',
-                        backgroundColor: 'AliceBlue', 
-                        padding: 5,
-                        width: 275
-		}
-		return (
-			<blockquote style={blockStyle}>&ldquo;{this.props.quotation}</blockquote>
-
-			); 
-	}
-} 
-
-
-Love.defaultProps = {
-   bc: 'Tomato', 
-   width: 306,
-   pixwidth: 310,
-   pixheight: 229,
-   font: 'Avara'
-} 
-
-TextBox.defaultProps = {
-   bc: 'Tomato',
-font: 'Quicksand',
-width: 245
-
-}
-    
-    ReactDOM.render(
-
-     
-<div> 
-
-<Love title="Revolving door of government, vaccine industry pose risk to public health" link="https://www.youtube.com/watch?v=5CfLDXpC324&feature=emb_logo" photo="assets/rfkennedyjr.png" quote="&ldquo;Merck got caught with Vioxx...&rdquo; - Robert F. Kennedy, Jr." />  
-
-
-
-</div> 
-
-        ,
-    blackandwhite
-    );
-
-
-
-ReactDOM.render(
-
-<div>
-
-
-
-<iframe width="275" height="190" src="https://www.youtube.com/embed/8DzBfaM3oV8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
- 
-
-
-</div>
-        ,
-   oyster
-    );
-
-
-ReactDOM.render(
-
-     
-
-<div>
-
-
-
-
-</div>
-        ,
-    seaotter
-    );
-  </script>
-  </script>
-<br>
-<br>
-
-
-
-
-<div class="react-app" >
-<div id="app2"><div class="loading">
-		<div class="obj"></div>
-		<div class="obj"></div>
-		<div class="obj"></div>
-		<div class="obj"></div>
-		<div class="obj"></div>
-		<div class="obj"></div>
-		<div class="obj"></div>
-		<div class="obj"></div>
-
-	</div></div>
-<div id="app3"></div>
-<div id="app4"></div>
-</div>
-
-<!-- ABOVE DIV TAGS ARE RELEVANT TO REACT COMPONENTS PLACEMENT-->
-
-
-
-
- <nav class="navbar">
-
-
-<div class="nav-style"><a href="NavComponents/Animals.html">Animals</a></div>
-<div class="nav-style"><a href="freewrite.php">Books</a></div>
-
-<div class="nav-style"><a href="NavComponents/Climate.html">Climate | Trees </a></div>
-<div class="nav-style"><a href="NavComponents/vaccines-qui-tam.html">"Corona-virus"</a></div>
-<div class="nav-style"><a href="NavComponents/5G.html">Dark Web</a></div>
-
-<div class="nav-style"><a href="February2019/name-the-problem.html">Math</a></div>
-
-
-<div class="nav-style"><a href="NavComponents/Plastics.html">Plastics </a></div>
-
-<div class="nav-style"><a href="February2019/predictive-policing.html">Police|Predpol</a></div>
-<div class="nav-style"><a href="NavComponents/exposing-pornography.html">Pornography</a></div>
-<div class="nav-style"><a href="NavComponents/space.html">Space</a></div>
-
-  </nav>
-
-<div hidden><a href="form.html">form</a></div><br>
-
-
-	
-	<script>
-$(document).ready(function(){
-  $("button").click(function(){
-    $("#thu").toggle();
-  });
-});
-
-</script>
-
-
-<div hidden id="recordings"></div>
-<div id="thu"></div>
-
-
-
-
-
-
-<!--<div><a href="#top" class="button">Back to top</a></div>
-<br>-->
-
-	<script src="js/array.js"></script>
-
-
-</body>
+    <p id="load">Firebase SDK Loading&hellip;</p>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
 </html>

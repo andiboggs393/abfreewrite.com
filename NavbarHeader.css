@@ -1,0 +1,64 @@
+.logo {
+    display: flex;
+    font-family: 'Oi', cursive;
+    color: whitesmoke;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 30px;
+    background-color: darkcyan;
+   opacity: .4;
+    text-decoration: none;
+    justify-content: space-around;
+
+}
+
+ .inline {
+    display: inline-block;
+    
+}
+
+header a {
+    display: flex;
+    text-decoration: none;
+    color: navy;
+    text-transform: uppercase;
+    opacity: 0.6;
+    padding: 0 15px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 32px;
+    line-height: 50px;
+}
+
+/* @media (max-width: 750px){
+    header .inline {
+            margin: 0;
+            width: 100%;
+            text-align: center;
+    }
+}
+
+@media (max-width: 500px){
+    header {
+        position: fixed;
+        top:0;
+        left: 0; 
+        background-color:thistle; 
+       
+        width: 100%;
+       
+        
+        display: flex; */
+        /* justify-content: space-around;
+        align-items: center; */
+        /* flex-direction: column;
+        z-index: 99;
+        transition: 0.5 linear; 
+    }
+} */
+
+
+
+
+

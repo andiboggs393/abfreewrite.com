@@ -1,0 +1,25 @@
+.clear {
+    background-color: azure;
+    list-style-type: none;
+}
+
+.mideast {
+    background-color: coral;
+}
+
+/* p {
+    position: absolute;
+    bottom: 10px;
+    align-items: center;
+} */
+
+.paywall {
+    line-height: 3em; 
+}
+
+
+
+
+
+
+
