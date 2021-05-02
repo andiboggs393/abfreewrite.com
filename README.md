@@ -1,1 +1,1 @@
-# abfreewrite.com is a website created by Andi Boggs beginning in January 2019. She makes all of her coding advancments available as they happen. She learns from coding teachers from all over the web. 
+# 
