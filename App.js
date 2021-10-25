@@ -1,47 +1,87 @@
 import logo from './logo.svg';
 import './App.css';
-import './index';
+// import './index';
 import Home from './Home'
 import './Home.css'
-import Math from './Math'
-import './Math.css'
-import './Covid.css'
-import {Route, Link} from 'react-router-dom'
-import NavBar from './NavBar'
+
 import Love from './components/Love'
-import Animals from './Animals'
 import Books from './Books'
 import books from './components/books_list'
 import './NavbarHeader.css'
-import Housing from './components/sliders/homelessSlider';
-import Housing4Poor from './Housing';
-import Covid19 from './CovidSlider';
-import CovidSlider from './CovidSlider';
-import Covid_19 from './Covid_19';
-import World from './sections/World'
-import DogBiteLaw from './components/DogBiteLaw'
-import SanDiego from './SanDiego';
-import Policing from './components/Policing';
-import Contact from './components/Contact';
-import BorderCrisis from './Border';
+// import Contact from './components/Contact';
+// import Store from './Store'
+import Checkout from './Checkout'
+import BooksApp from './BooksApp';
+import Login from './Login';
+import { auth } from './firebase';
+import { useStateValue } from './StateProvider'
+import { useEffect } from 'react'
+import Header from './Header';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Navbar from './NavBar';
+import newsData from './components/newsList';
+import Search from './components/Search'
+import News from './News';
+
+
 
 function App() {
+  const [{}, dispatch] = useStateValue();
+
+  useEffect(() => {
+
+    auth.onAuthStateChanged(authUser => {
+      console.log('The User is >>> ', authUser);
+
+      if (authUser) {
+        dispatch({ 
+          type: 'SET_USER', 
+          user: authUser
+        })
+      } else {
+        dispatch({
+          type: 'SET_USER',
+          user: null
+        })
+      }
+    })
+    // this will only run once when App comp loads 
+  }, [])
+
   return (
-    <div className="App">
-    <NavBar /> 
-     <Route exact path="/" component={Home} />
-     <Route exact path="/animals" component={Animals} /> 
-     <Route exact path="/math" component={Math} />
-     <Route exact path ="/sandiego" component={SanDiego} /> 
-     <Route exact path="/housing" component={Housing4Poor} />
-     <Route exact path="/border" component={BorderCrisis} /> 
-     <Route exact path="/policing" component={Policing} />
-     <Route exact path="/contact" component={Contact} /> 
-     <Route exact path="/covid_19" component={Covid_19} /> 
-     <Route exact path="/books" component={Books} />
-     <Route exact path="/sections/world" component={World} /> 
-      
-    </div>
+    <Router>
+      <div className="App">
+        {/* <Header /> */}{/*If you put header here it appears at top of every page*/}
+        <Switch>
+          {/* <Route path="/checkout">
+            <Header />
+            <Checkout />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/search">
+            <Search />
+          </Route> */} {/* Commenting this out does not remove comps from browser */}
+          <Route path="/books">
+            <Navbar />
+            <Books />
+          </Route>
+          {/* <Route path="/news">
+            <Navbar />
+            <News />
+          </Route> */} {/*Commenting out path='news' and replacing Home comp below w news */}
+
+
+          <Route path="/">
+            {/* <Header /> */} {/*Commenting this out does remove Comps from browser*/}
+            <Navbar />
+            <News /> {/*<Home />*/} {/*Remove Home from Navbar*/}
+          </Route>
+
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
