@@ -21,73 +21,86 @@ import freewriteData from './components/personalWriting';
 import myTextBox from './personalTextbox';
 import RejectFiles from './Drafts/RejectFiles';
 import './components/news.css'
+import { SkipPreviousOutlined } from '@material-ui/icons';
 
 function News() {
-  const name="andi";
-  const isMale = false;
 
   const [show, setShow] = useState(true)
   const [showCool, setShowCool] = useState(true)
   const [showTextBox, setShowTextBox] = useState(true)
   const [showAllNews, setShowAllNews] = useState(newsData)
-  const [showRemovedLinks, setShowRemovedLinks] = useState(newsData)
+  const [previous, setPrevious] = useState([], newsData)
 
-  const newsGroup = newsData.map((harik, index) => <div className="inline" key={index} id="news">{index}<Love  title={harik.title} link={harik.link} photo={harik.photo} bc={harik.bc} /></div>);
+  const newsGroup = newsData.map((harik, index) => <div className="inline" key={index}>{index}<Love id={index.id} title={harik.title} link={harik.link} photo={harik.photo} bc={harik.bc} /></div>);
+
 
   const freewrites = freewriteData.map(essay => <div className="inline" id="essay"><Freewrite key={essay.id} bold={essay.bold} date={essay.date} article={essay.article} /></div>)
 
 
 
-
-
-  // const = () => newsAway{
+  function next() {
+    setShowAllNews(newsData.shift(previous.push(previous.unshift())))
     
-  //   newsData.shift(newsData.length -1);
-  // }
+   
+    console.log("Previous length is" + previous.length + " newsData length : " + newsData.length)
+  }
 
-  // function newsComeBack(){
-  //   newsData.unshift(newsData.length - 1);
-  // }
+  function last() {
+  
+
+
+  //  setShowAllNews(newsData.reverse(previous.pop()))
+  //this does not add love component it just reverses the order of the state 
+
+    setShowAllNews(newsData.unshift(previous.pop()))
+    
+    //adds love component ut not with the props passed down 
+  }
+
+
+  
 
 
   return (
     <div>
       {/*  */}
 
-   
-      
-      <div className="blue__buttons">
-        {/* <div><button onClick={() => setShow(true)}>Show News</button></div>
-        <div><button onClick={() => setShow(false)}>Hide News</button></div> */}
-      </div>
 
       <p><button onClick={() => setShow(!show)}>Toggle News </button></p>
-      
-      { show === true ? <button onClick={() => setShowAllNews(newsData.shift())}>Next</button>: null}
-      {/* <button onClick={() => setShowRemovedLinks(newsData.unshift(newsData.length - 1))}>Make news come back</button> */}
-      
-      {/* {<p><button onClick={newsComeBack()}>Make news come back</button></p>} */}
-      {console.log(newsData.length)}
+
+
+      <button onClick={() => console.log("Previous length is" + previous.length + " " + previous)}>Previous</button>
+
+      {previous != 0 ? <button onClick={()=> last()} >Last</button> : null}
+
+
+      {/* { show === true ? <button onClick={() => setShowAllNews(newsData.shift(previous.push(previous.unshift())))}>Next</button>: null} */}
+      {show === true ? <button onClick={() => next()}>Next</button> : console.log("NULL") + null}
+      {/*snippet works to put index in previous array but does not put the properties of the objects */}
+
+
+
+
 
       {show ? <header className="search"><Search /></header> : null}
 
       {/* the "news group" is being mapped by the Search component*/}
       {/* {newsGroup} */}
 
-      
+
       <p><button onClick={() => setShowCool(!showCool)}>Toggle Freewrites </button></p>
       {/* <p><button onClick={() => setShowTextBox(!showTextBox)}>Toggle Ideas </button></p> */}
 
-      {showCool ? <div>{freewrites}</div>: null}
+      {showCool ? <div>{freewrites}</div> : null}
 
-{/* {showTextBox ? <div>
+      {/* {showTextBox ? <div>
       <Textbox bc="Salmon" content="Vaccines are not vegan ~ they contain slaughtered monkey kidney cells." />
       <Textbox bc="DarkSlateGray" content="There is a bug in the human psyche that is very easy to exploit." />
       <Textbox bc="DarkSlateGray" smallfont="Increasing waste and incompetency at bureaucratic level + increasing greed at corporate level + increasing autism in childbirth + modern history based on lies + embezzlement by military industrial complex = America today" ptext="DarkSlateGray" bcc="Salmon" />
       </div>: null }   */}
-      
+
       {console.log(newsData[0])}
-{/* <h3>You are a { isMale ? 'male': 'female' }</h3> */}
+      {/* <h3>You are a { isMale ? 'male': 'female' }</h3> */}
 
     </div>
 
